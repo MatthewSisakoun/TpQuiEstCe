@@ -14,7 +14,7 @@ for ($i=0; $i < count($tableau); $i++) {
 if($errorColumn == null){
     echo "pas d'error";
 }else{
-    echo "error";
+    echo "Vous avez menti à la question". $errorColumn;
 }
 
 // foreach($tableau as $value){
