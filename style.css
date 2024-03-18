@@ -1,0 +1,18 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.images-containner{
+    max-width: 1000px;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.images-containner img{
+    border: #000 2px solid;
+}
