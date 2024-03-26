@@ -24,3 +24,6 @@ body{
 .images-containner img{
     border: #000 2px solid;
 }
+label{
+    user-select: none;
+}
