@@ -35,8 +35,10 @@ body{
 label{
     user-select: none;
     font-size: x-large;
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 1rem;
 }
-label{
-    user-select: none;
+form div{
+    display: flex;
+    flex-direction: column;
 }

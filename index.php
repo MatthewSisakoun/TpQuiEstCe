@@ -41,37 +41,129 @@ $personnnages = [
             }
             ?>
         </div>
-        <div class="question-container">
-            <label for="q1">
+        <form class="question-container" action="./post.php" method="post">
+            <div>
                 1. A-t-il des lunettes ?
-                <input id="q1" type="checkbox">
+                <label for="q1-oui">
+                    oui
+                    <input type="radio" name="q1" id="q1-oui" value="1">
+                </label>
+
+                <label for="q1-non">
+                    non
+                    <input type="radio" name="q1" id="q1-non" value="0">
+                </label>
+            </div>
+            
+            <div>
+                2. A-t-il une moustache ?
+                <label for="q2-oui">
+                    oui
+                    <input type="radio" name="q2" id="q2-oui" value="1">
+                </label>
+
+                <label for="q2-non">
+                    non
+                    <input type="radio" name="q2" id="q2-non" value="0">
+                </label>
+            </div>
+
+            <div>
+                3. A-t-il un chapeau ?
+                <label for="q3-oui">
+                    oui
+                    <input type="radio" name="q3" id="q3-oui" value="1">
+                </label>
+
+                <label for="q3-non">
+                    non
+                    <input type="radio" name="q3" id="q3-non" value="0">
+                </label>
+            </div>
+
+            <div>
+                4. A-t-il des cheveux ?
+                <label for="q4-oui">
+                    oui
+                    <input type="radio" name="q4" id="q4-oui" value="1">
+                </label>
+
+                <label for="q4-non">
+                    non
+                    <input type="radio" name="q4" id="q4-non" value="0">
+                </label>
+            </div>
+
+            <div>
+                5. A-t-il une boucle d'oreille ?
+                <label for="q5-oui">
+                    oui
+                    <input type="radio" name="q5" id="q5-oui" value="1">
+                </label>
+
+                <label for="q5-non">
+                    non
+                    <input type="radio" name="q5" id="q5-non" value="0">
+                </label>
+            </div>
+            <div>
+                6. A-t-il une barbe ?
+                <label for="q6-oui">
+                    oui
+                    <input type="radio" name="q6" id="q6-oui" value="1">
+                </label>
+
+                <label for="q6-non">
+                    non
+                    <input type="radio" name="q6" id="q6-non" value="0">
+                </label>
+            </div>
+            <div>
+            7. A-t-il un noeud papillon ?
+                <label for="q7-oui">
+                    oui
+                    <input type="radio" name="q7" id="q7-oui" value="1">
+                </label>
+
+                <label for="q7-non">
+                    non
+                    <input type="radio" name="q7" id="q7-non" value="0">
+                </label>
+            </div>
+            
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <!-- <script src="./index.js"></script> -->
+</body>
+
+
+</html>
+
+<!-- <label for="q1">
+                1. A-t-il des lunettes ?
             </label>
             <label for="q2">
                 2. A-t-il une moustache ?
-                <input id="q2" type="checkbox">
+                <input id="q2" type="checkbox" name="q2">
             </label>
             <label for="q3">
                 3. A-t-il un chapeau ?
-                <input id="q3" type="checkbox">
+                <input id="q3" type="checkbox" name="q3">
             </label>
             <label for="q4">
                 4. A-t-il des cheveux ?
-                <input id="q4" type="checkbox">
+                <input id="q4" type="checkbox" name="q4">
             </label>
             <label for="q5">
                 5. A-t-il une boucle d'oreille ?
-                <input id="q5" type="checkbox">
+                <input id="q5" type="checkbox" name="q5">
             </label>
             <label for="q6">
                 6. A-t-il une barbe ?
-                <input id="q6" type="checkbox">
+                <input id="q6" type="checkbox" name="q6">  
             </label>
             <label for="q7">
                 7. A-t-il un noeud papillon ?
-                <input id="q7" type="checkbox">
-            </label>
-        </div>
-    </div>
-</body>
-
-</html>
+                <input id="q7" type="checkbox" name="q7">
+            </label> -->
