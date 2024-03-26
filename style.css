@@ -28,9 +28,12 @@ body{
     align-items: center;
     flex-direction: column;
 }
- img{
+img{
     border: #000 2.5px solid;
     width: 100px;
+}
+img.active{
+    border: blue 2.5px solid;
 }
 label{
     user-select: none;
@@ -41,4 +44,5 @@ label{
 form div{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }

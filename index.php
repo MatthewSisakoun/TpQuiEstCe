@@ -17,7 +17,42 @@ $personnnages = [
     "1101100.jpg",
     "1111111.jpg"
 ];
-?>
+$message =  null;
+$filename = null;
+$isCorrect = false;
+
+if(!empty($_POST)){
+    $nombre = "";
+
+    $random_index =  random_int(0, count($personnnages));
+    $random_personnnage = $personnnages[$random_index];
+
+    foreach($_POST as $key => $value){
+        $nombre .= $value;
+    }
+    $s1 = (($nombre[0] + $nombre[2] + $nombre[4] + $nombre[6]) % 2);
+    $s2 = (($nombre[1] + $nombre[2] + $nombre[4] + $nombre[5]) % 2);
+    $s3 = (($nombre[3] + $nombre[4] + $nombre[5] + $nombre[6]) % 2);
+    
+    $signaturesyndrome =  [[1,0,0],[0,1,0],[1,1,0],[0,0,1],[1,1,1],[0,1,1],[1,0,1]];
+    $errorColumn = null;
+
+    for ($i=0; $i < count($signaturesyndrome); $i++) { 
+        $value = $signaturesyndrome[$i];
+        if($value[0] == $s1 && $value[1] == $s2 && $value[2] == $s3){
+            $errorColumn = $i + 1;
+        }
+    }
+
+    if($errorColumn == null){
+        $filename  = $nombre . ".jpg";
+        if($filename === $random_personnnage){
+            $isCorrect = true;
+        }
+    }else{
+        echo "Vous avez menti à la question ". $errorColumn;
+    }
+}?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -32,26 +67,36 @@ $personnnages = [
 <body>
     <div class="title">
         <h1>Qui est-ce ?</h1>
+        <?php
+            if(empty($_POST) && !$isCorrect):
+        ?>
+            <!-- <p>le personnage choisi n'est pas le bon</p> -->
+        <?php endif; ?>
+
     </div>
     <div class="main-container">
         <div class="images-container">
-            <?php foreach ($personnnages as $personnnage) { ?>
-                <img src=<?= "./images/$personnnage" ?> alt="" srcset="">
-                <?php
-            }
-            ?>
+            <?php foreach ($personnnages as $personnnage) : ?>
+
+                <img 
+                    src="<?= "./images/$personnnage" ?>"
+                    alt=""
+                    srcset=""
+                    class="<?= $filename  === $personnnage  ? "active": ""?>"
+                >
+            <?php endforeach;?>
         </div>
-        <form class="question-container" action="./post.php" method="post">
+        <form class="question-container" action="./index.php" method="post">
             <div>
                 1. A-t-il des lunettes ?
                 <label for="q1-oui">
                     oui
-                    <input type="radio" name="q1" id="q1-oui" value="1">
+                    <input type="radio" name="q1" id="q1-oui" value="1" >
                 </label>
 
                 <label for="q1-non">
                     non
-                    <input type="radio" name="q1" id="q1-non" value="0">
+                    <input type="radio" name="q1" id="q1-non" value="0"  checked>
                 </label>
             </div>
             
@@ -59,12 +104,12 @@ $personnnages = [
                 2. A-t-il une moustache ?
                 <label for="q2-oui">
                     oui
-                    <input type="radio" name="q2" id="q2-oui" value="1">
+                    <input type="radio" name="q2" id="q2-oui" value="1" >
                 </label>
 
                 <label for="q2-non">
                     non
-                    <input type="radio" name="q2" id="q2-non" value="0">
+                    <input type="radio" name="q2" id="q2-non" value="0" checked>
                 </label>
             </div>
 
@@ -77,7 +122,7 @@ $personnnages = [
 
                 <label for="q3-non">
                     non
-                    <input type="radio" name="q3" id="q3-non" value="0">
+                    <input type="radio" name="q3" id="q3-non" value="0" checked>
                 </label>
             </div>
 
@@ -90,7 +135,7 @@ $personnnages = [
 
                 <label for="q4-non">
                     non
-                    <input type="radio" name="q4" id="q4-non" value="0">
+                    <input type="radio" name="q4" id="q4-non" value="0" checked>
                 </label>
             </div>
 
@@ -103,7 +148,7 @@ $personnnages = [
 
                 <label for="q5-non">
                     non
-                    <input type="radio" name="q5" id="q5-non" value="0">
+                    <input type="radio" name="q5" id="q5-non" value="0" checked>
                 </label>
             </div>
             <div>
@@ -115,11 +160,11 @@ $personnnages = [
 
                 <label for="q6-non">
                     non
-                    <input type="radio" name="q6" id="q6-non" value="0">
+                    <input type="radio" name="q6" id="q6-non" value="0" checked>
                 </label>
             </div>
             <div>
-            7. A-t-il un noeud papillon ?
+                7. A-t-il un noeud papillon ?
                 <label for="q7-oui">
                     oui
                     <input type="radio" name="q7" id="q7-oui" value="1">
@@ -127,7 +172,7 @@ $personnnages = [
 
                 <label for="q7-non">
                     non
-                    <input type="radio" name="q7" id="q7-non" value="0">
+                    <input type="radio" name="q7" id="q7-non" value="0" checked>
                 </label>
             </div>
             
