@@ -39,31 +39,6 @@ if($errorColumn == null){
     echo "Vous avez menti à la question ". $errorColumn;
 }
 
-// if ($s1 == 0 && $s2 == 0 && $s3 == 0) {
-//     echo "Vous n'avez pas menti";
-// }
-// elseif ($s1 == 1 && $s2 == 0 && $s3 == 0){
-//     echo "Vous avez menti à la première question";
-// }
-// elseif ($s1 == 0 && $s2 == 1 && $s3 == 0) {
-//     echo "Vous avez menti à la seconde question";
-// }
-// elseif ($s1 == 1 && $s2 == 1 && $s3 == 0) {
-//     echo "Vous avez menti à la troisième question";
-// }
-// elseif ($s1 == 0 && $s2 == 0 && $s3 == 1) {
-//     echo "Vous avez menti à la quatrième question";
-// }
-// elseif ($s1 == 1 && $s2 == 1 && $s3 == 1) {
-//     echo "Vous avez menti à la cinquième question";
-// }
-// elseif ($s1 == 0 && $s2 == 1 && $s3 == 1) {
-//     echo "Vous avez menti à la sixième question";
-// }
-// elseif ($s1 == 1 && $s2 == 0 && $s3 == 1) {
-//     echo "Vous avez menti à la septième question";
-// }
-
 ?>
 
 

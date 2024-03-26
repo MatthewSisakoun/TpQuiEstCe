@@ -36,10 +36,15 @@
                 alt=""
                 srcset=""
             >
-        <?php 
+        <?php
             }
         ?>
-    
+    </div>
+    <div class="question-conatiner">
+        <label for="">
+            1. A-t-il des lunettes ?
+            <input type="checkbox">            
+        </label>
     </div>
 </body>
 </html>

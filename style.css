@@ -13,6 +13,14 @@ body{
     justify-content: center;
     align-items: center;
 }
+.question-conatiner{
+    max-width: 1000px;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 .images-containner img{
     border: #000 2px solid;
 }
