@@ -24,9 +24,6 @@ $isCorrect = false;
 if(!empty($_POST)){
     $nombre = "";
 
-    $random_index =  random_int(0, count($personnnages));
-    $random_personnnage = $personnnages[$random_index];
-
     foreach($_POST as $key => $value){
         $nombre .= $value;
     }
@@ -46,9 +43,7 @@ if(!empty($_POST)){
 
     if($errorColumn == null){
         $filename  = $nombre . ".jpg";
-        if($filename === $random_personnnage){
-            $isCorrect = true;
-        }
+        $isCorrect = true;
     }else{
         echo "Vous avez menti à la question ". $errorColumn;
     }
@@ -62,8 +57,6 @@ if(!empty($_POST)){
     <title>Tp Qui Est Ce ?</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
     <div class="title">
         <h1>Qui est-ce ?</h1>
