@@ -23,7 +23,6 @@ $isCorrect = false;
 
 if(!empty($_POST)){
     $nombre = "";
-
     foreach($_POST as $key => $value){
         $nombre .= $value;
     }
@@ -65,7 +64,6 @@ if(!empty($_POST)){
         ?>
             <!-- <p>le personnage choisi n'est pas le bon</p> -->
         <?php endif; ?>
-
     </div>
     <div class="main-container">
         <div class="images-container">
